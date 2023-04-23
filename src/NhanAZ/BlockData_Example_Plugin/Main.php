@@ -62,7 +62,7 @@ final class Main extends PluginBase implements Listener {
 				$durability = $data[1];
 				if ($durability > 1) {
 					$event->cancel();
-					$durability = $durability - 1;
+					$durability = (int) $durability - 1;
 					$this->blockdata->setData($block, "durability:{$durability}");
 				}
 			}
