@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/NhanAZ/BlockData_Example_Plugin
+build-by-default: true
+branches:
+- master
+projects:
+  BlockData_Example_Plugin:
+    path: ""
+...
