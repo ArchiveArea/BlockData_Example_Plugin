@@ -1,0 +1,18 @@
+{
+  "name": "nhanaz/blockdata_example_plugin",
+  "description": "Example plugin to showcase how BlockData read-writes work.",
+  "type": "pocketmine-plugin",
+  "require": {
+    "pocketmine/pocketmine-mp": "^4.0.0",
+    "nhanaz/blockdata": "^0.0.1"
+  },
+  "require-dev": {
+    "sof3/pharynx": "^0.3.0"
+  },
+  "license": "LGPL-3.0-or-later",
+  "autoload": {
+    "classmap": [
+      "src"
+    ]
+  }
+}
