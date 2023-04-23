@@ -5,4 +5,7 @@ branches:
 projects:
   BlockData_Example_Plugin:
     path: ""
+    libs:
+      - src: NhanAZ/BlockData/BlockData
+        version: 0.0.1
 ...
