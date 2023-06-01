@@ -1,4 +1,4 @@
 name: BlockData_Example_Plugin
 main: NhanAZ\BlockData_Example_Plugin\Main
-api: 4.0.0
+api: 5.0.0
 version: 0.0.1
