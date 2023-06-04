@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace NhanAZ\BlockData_Example_Plugin;
 
 use NhanAZ\BlockData\BlockData;
+use pocketmine\block\Block;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
@@ -43,9 +44,12 @@ final class Main extends PluginBase implements Listener {
 	 * @priority HIGH
 	 */
 	public function onBlockPlace(BlockPlaceEvent $event): void {
-		$block = $event->getBlock();
-		if ($block->isSameType(VanillaBlocks::GLASS())) {
-			$this->blockdata->setData($block, "durability:4");
+		$blocks = $event->getTransaction()->getBlocks();
+		foreach ($blocks as [$x, $y, $z, $block]) {
+			if (!$block instanceof Block) return;
+			if ($block->isSameType(VanillaBlocks::GLASS())) {
+				$this->blockdata->setData($block, "durability:4");
+			}
 		}
 	}
 
